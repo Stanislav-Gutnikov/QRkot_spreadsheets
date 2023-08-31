@@ -18,7 +18,7 @@ class Settings(BaseSettings):
     token_uri: Optional[str] = 'TOKEN_URI'
     auth_provider_x509_cert_url: Optional[str] = 'AUTH_PROVIDER_X509_CERT_URL'
     client_x509_cert_url: Optional[str] = 'CLIENT_X509_CERT_URL'
-    email: Optional[str] = 'EMAIL'
+    email: Optional[str] = None
 
     class Config:
         env_file = '.env'
