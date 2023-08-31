@@ -1,4 +1,4 @@
-from fastapi import APIRouter
+from fastapi import APIRouter # noqa
 
 from app.api.endpoints.charity_project import router as charity_projects_router
 from app.api.endpoints.donation import router as donations_router
