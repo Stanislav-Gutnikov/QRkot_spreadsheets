@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     database_url: str = 'sqlite+aiosqlite:///./fastapi.db'
     secret: str = 'SECRET'
     first_superuser_email: Optional[EmailStr] = None  # 'FIRST_SUPERUSER_EMAIL'
-    first_superuser_password: Optional[str] = None  #'FIRST_SUPERUSER_PASSWORD'
+    first_superuser_password: Optional[str] = None  # 'FIRST_SUPERUSER_PASSWORD'
     type: Optional[str] = 'TYPE'
     project_id: Optional[str] = 'PROJECT_ID'
     private_key_id: Optional[str] = 'PRIVATE_KEY_ID'
