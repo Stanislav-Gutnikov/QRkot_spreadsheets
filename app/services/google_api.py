@@ -7,14 +7,23 @@ from app.core.config import settings
 FORMAT = "%Y/%m/%d %H:%M:%S"
 NOW_DATE_TIME = datetime.now().strftime(FORMAT)
 SPREADSHEET_BODY = {
-        'properties': {'title': f'Отчет на {NOW_DATE_TIME}',
-                       'locale': 'ru_RU'},
-        'sheets': [{'properties': {'sheetType': 'GRID',
-                                   'sheetId': 0,
-                                   'title': 'Лист1',
-                                   'gridProperties': {'rowCount': 100,
-                                                      'columnCount': 11}}}]
-    }
+    'properties': {
+        'title': f'Отчет на {NOW_DATE_TIME}',
+        'locale': 'ru_RU'
+    },
+    'sheets': [{
+        'properties': {
+            'sheetType': 'GRID',
+            'sheetId': 0,
+            'title': 'Лист1',
+            'gridProperties': {
+                'rowCount': 100,
+                'columnCount': 11
+            }
+        }
+    }]
+}
+
 
 async def spreadsheets_create(wrapper_services: Aiogoogle) -> str:
     service = await wrapper_services.discover('sheets', 'v4')
