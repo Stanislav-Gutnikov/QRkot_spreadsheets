@@ -7,7 +7,7 @@ from app.core.config import settings
 FORMAT = "%Y/%m/%d %H:%M:%S"
 SPREADSHEET_BODY = {
     'properties': {
-        'title': f'Отчет на ',
+        'title': 'Отчет на ',
         'locale': 'ru_RU'
     },
     'sheets': [{
